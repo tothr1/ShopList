@@ -7,10 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <!--color name="mtrl_textinput_default_box_stroke_color" tools:overrise = "true">#296D98</color>
-    <color name="blue_shade_1">#0E2433</color>
-    <color name="blue_shade_2">#1C4966</color-->
-    <color name="mtrl_textinput_default_box_stroke_color" tools:overrise="true">#296D98</color>
+    <!--color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#296D98</color-->
     <color name="blue_shade_1">#0E2433</color>
     <color name="blue_shade_2">#1C4966</color>
 </resources>
