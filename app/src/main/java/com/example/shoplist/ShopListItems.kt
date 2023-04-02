@@ -1,7 +1,7 @@
 package com.example.shoplist
 
 import androidx.room.*
-import androidx.room.ForeignKey.SET_NULL
+//import androidx.room.ForeignKey.SET_NULL
 
 @Entity(
     tableName = "product",
@@ -22,7 +22,7 @@ data class Product (
     ]
 )
 data class ShopList(
-    @PrimaryKey val id: Int,
+    @PrimaryKey val listId: Int,
     val alias: String
 )
 
@@ -34,21 +34,21 @@ data class ShopList(
     foreignKeys = [
         ForeignKey(
             entity = ShopList::class,
-            parentColumns = ["id"],
-            childColumns = ["list_id"],
-            onDelete = SET_NULL
+            parentColumns = ["listId"],
+            childColumns = ["listId"],
+            onDelete = androidx.room.ForeignKey.SET_NULL
         ),
         ForeignKey(
             entity = Product::class,
             parentColumns = ["barcode"],
             childColumns = ["barcode"],
-            onDelete = SET_NULL
+            onDelete = androidx.room.ForeignKey.SET_NULL
         )
     ]
 )
 data class ListItem(
-    @PrimaryKey val id: Int,
-    val list_id: Int,
+    @PrimaryKey val itemId: Int,
+    val listId: Int,
     val barcode: String,
     val quantity: Int
 )
